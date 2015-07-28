@@ -12,6 +12,7 @@ import android.content.Intent;
 //import java.security.MessageDigest;
 //import android.util.Base64;
 //import android.view.View;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.facebook.FacebookSdk;
@@ -78,6 +79,7 @@ public class MainActivity extends Activity
 			{
 				// App code
 				text.setText("access granted");
+				Log.i("asdf", "access granted");
 
 				startActivity(i);
 
