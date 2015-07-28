@@ -32,6 +32,12 @@ public class GetFriendList extends ListActivity
 		super.onCreate(savedInstanceState);
 		FacebookSdk.sdkInitialize(getApplicationContext());
 
+//			  AccessToken accessToken = AccessToken(getString(R.string.access_token), getString(R.string.facebook_app_id),
+//			  getString(R.string.user_id),
+//			  Collection permissions, Collection declinedPermissions, AccessTokenSource accessTokenSource,
+//			  getString(R.string.expires), Date lastRefreshTime);
+
+
 		AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
 			@Override
 			protected void onCurrentAccessTokenChanged(
