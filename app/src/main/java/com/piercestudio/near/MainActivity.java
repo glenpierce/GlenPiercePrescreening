@@ -65,6 +65,12 @@ public class MainActivity extends Activity
 		callbackManager = CallbackManager.Factory.create();
 
 		LoginButton loginButton = (LoginButton)findViewById(R.id.login_button);
+
+		loginButton.setReadPermissions("user_friends");
+		loginButton.setReadPermissions("user_location");
+
+		final Intent i = new Intent(this, GetFriendList.class);
+
 		loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>()
 		{
 			@Override
@@ -72,6 +78,9 @@ public class MainActivity extends Activity
 			{
 				// App code
 				text.setText("access granted");
+
+				startActivity(i);
+
 			}
 
 			@Override
